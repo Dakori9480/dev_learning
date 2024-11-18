@@ -27,7 +27,7 @@ def enum_links(html, base):
 # 파일을 다운받고 저장하는 함수
 def download_file(url):
     o = urlparse(url)
-    savepath = "./" + o.netloc + o.path
+    savepath = "./downloads/" + o.netloc + o.path
     if re.search(r"/$", savepath): # 폴더라면 index.html
         savepath += "index.html"
     savedir = os.path.dirname(savepath)
